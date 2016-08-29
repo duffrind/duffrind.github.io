@@ -9,7 +9,7 @@
     <meta name="description" content="David Duffrin's Japanese Natural Language Processing Project">
     <meta name="author" content="David Duffrin">
 
-    <title>Natural Language Processing</title>
+    <title>Natural Language Processing Thesis</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -62,25 +62,29 @@
 
     <!-- Page Content -->
     <div class="container">
-        <h1>Exploring NLP with Python</h1>
+        <h1>Gaining Insight into Kanji through NLP</h1>
         <div class="jumbotron">
         <table style="width:100%">
             <tr>
                 <td>
                     <div class="row">
-                        <div class="col-md-8">
-                            <h2>Current Obstacles in Japanese Natural Language Processing</h2>
+                        <div class="col-md-12">
+                            <h2>List of things to do for my research:</h2>
                             <ul>
-                                <li>Tokenizing individual words</li>
-                                <li>Parsing Part-of-Speech tags</li>
-                                <li>Providing Katakana readings for Kanji</li>
-                                <li>Conjugating adjectives and verbs into their dictionary forms</li>
-                                <li>Recognizing slang and colloquial Japanese</li>
+                                <li>Split up the pronunciations of words and align parts of the pronunciations to the Kanji/Kana</li>
+                                <li>Determine important features and their relationships</li>
+                                <ul>
+                                    <li>Pronunciation of syllable before and after Kanji of interest</li>
+                                    <li>Kanji/Kana type of grapheme before and after Kanji of interest</li>
+                                    <li>Meaning of vocabulary</li>
+                                </ul>
+                                <li>Train the Bayesian Network</li>
                             </ul>
                         </div>
-                        <div class="col-md-4">
+                    </div><div class="row">
+                        <div class="col-md-12">
                             <br>
-                            <p>I am currently working through the online textbook <a href="http://www.nltk.org/book/">Natural Language Processing with Python</a> and will finish the book by December and then start working on this side project.</p>
+                            <p>I am currently working on an algorithm in Python to use MeCab to parse vocabulary from one dataset and then match the pronunciations to the individual graphemes. Current problems are that some pronunciations are "irregular" and only appear for a certain vocabulary word, rendering my algorithm unable to match any pronunciations to any individual character.</p>
                         </div>
                     </div>
                 </td></tr><tr><td><br><br><P>To Be Continued...</p></td></tr>
@@ -93,7 +97,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; David Duffrin 2015</p>
+                    <p>Copyright &copy; David Duffrin 2016</p>
                 </div>
             </div>
             <!-- /.row -->

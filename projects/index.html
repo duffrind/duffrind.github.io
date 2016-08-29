@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Japanese Language Processing
-                    <small>in Python</small>
+                    <small>Thesis</small>
                 </h1>
             </div>
         </div>
@@ -83,15 +83,18 @@
             </div>
 
             <div class="col-md-4">
-                <h3>Exploring Language</h3>
-                <p>I am currently studying NLP one-on-one with a professor using the online textbook <a href="http://www.nltk.org/book/">Natural Language Processing with Python</a>. I hope to use the Tool Kit and the techniques learned in this book to create a Japanese notecard webapp in the near future. This webapp will be for those studying Japanese to upload movie subtitle files into and the program will automatically tokenize the individual words, conjugate verbs and adjectives to their dictionary forms, and then create flash cards to be studied so the user will be able to watch the movie with understanding. I will write the code using mostly modules that I create on my own to continue my exploration of NLP.</p>
-                <h3>Future Features of the WebApp</h3>
+                <h3>Education through Data</h3>
+                <p>Current technologies that estimate the pronunciation of a Kanji employ the help of look-up dictionaries. This is great for getting high accuracy, however the models are unable to be parsed into a human readable rule book to help learners of the language gain an insight on the features that influence which pronunciation is used in context. For my research, I am using the (<a href="http://www.edrdg.org/kanjidic/kanjd2index.html">Kanjidic2</a> dataset for individual Kanji pronunciations, <a href="http://www.edrdg.org/jmdict/edict_doc.html">JMdict</a> dataset for the vocabulary words, <a href="http://www.edrdg.org/enamdict/enamdict_doc.html">ENAMDICT</a> dataset for proper nouns, and <a href="http://taku910.github.io/mecab/">MeCab</a> for parsing text. <a href="../nlp/">Click here to view my current progress.</a></p>
+                <h3>Work to be done:</h3>
                 <ul>
-                    <li>Tokenize without the help of whitespace</li>
-                    <li>Conjugate verbs and adjectives back to dictionary form</li>
-                    <li>Colloquial speech recognition (slang/若者言葉)</li>
-                    <li>Parse POS taggers and integrate the sentence in which the word is used in context to help with studying</li>
-                    <li>Contain a database of previously studied words for each user so only new vocabulary will be studied</li>
+                    <li>Split up the pronunciations of words and align parts of the pronunciations to the Kanji/Kana</li>
+                    <li>Determine important features and their relationships</li>
+                        <ul>
+                            <li>Pronunciation of syllable before and after Kanji of interest</li>
+                            <li>Kanji/Kana type of grapheme before and after Kanji of interest</li>
+                            <li>Meaning of vocabulary</li>
+                        </ul>
+                    <li>Train the Bayesian Network</li>
                 </ul>
             </div>
 
@@ -102,30 +105,30 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h3 class="page-header">Past Projects</h3>
+                <h3 class="page-header">Projects <small>Click on any picture to read more</small></h3>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <span title="Augmented Reality using Google Cardboard and Unity"><a href="../unity/">
-                    <img class="img-responsive portfolio-item" src="../include/unity.jpg" alt="Augmented Reality using Google Cardboard">
+                <span title="Naive Bayes Spam Filter"><a href="../spam/">
+                    <img class="img-responsive portfolio-item" src="../include/spam.jpg" alt="Spammy Laptop">
+                </a></span>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <span title="PostgreSQL and Python"><a href="../database/">
+                    <img class="img-responsive portfolio-item" src="../include/KevinBacon.jpg" alt="Fun with Databases">
+                </a></span>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <span title="Augmented Reality using Unity and Vuforia"><a href="../unity/">
+                    <img class="img-responsive portfolio-item" src="../include/newunity.jpg" alt="3D Crime Visualizations">
                 </a></span>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <span title="Portable Gaming"><a href="../portables/">
                     <img class="img-responsive portfolio-item" src="../include/portables.jpg" alt="Portable Gaming">
-                </a></span>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <span title="Multiple Machine Arcade Emulator"><a href="../mame/">
-                    <img class="img-responsive portfolio-item" src="../include/mame_coming_soon.jpg" alt="Multiple Machine Arcade Emulator">
-                </a></span>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <span title="Virtual Reality"><a href="../vr/">
-                    <img class="img-responsive portfolio-item" src="../include/vr_coming_soon.jpg" alt="Virtual Reality">
                 </a></span>
             </div>
 
@@ -138,7 +141,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; David Duffrin 2015</p>
+                    <p>Copyright &copy; David Duffrin 2016</p>
                 </div>
             </div>
             <!-- /.row -->

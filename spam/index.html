@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="David Duffrin's Portable Nintendo Console Project">
+    <meta name="author" content="David Duffrin">
+
+    <title>Naive Bayes Spam Filter</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/portfolio-item.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="../include/icon.ico">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../">Portfolio</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../projects/">Projects</a>
+                    </li>
+                    <li>
+                        <a href="../contact/">Contact</a>
+                    </li>
+                    <li>
+                        <a href="../resume/">CV</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <h1>Naive Bayes Spam Filter</h1>
+        <div class="jumbotron">
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>For my Optimization and Machine Learning course, I created a Naive Bayesian Spam Filter. For the technical aspects of my project, I used Python 3 with Scikit-Learn. The corpora that I collected the sample emails used for testing and training my model were the Enron emails for the “ham” data and SpamAssassin emails for the “spam” data.</p>
+                        </div>
+
+                    </div></td></tr><tr><td><div class="row">
+
+                        <div class="col-md-12">
+                            <p>I chose Naive Bayes because it is historically used for the application of spam filters. For this project I am not using as much test data as would be used in production. The classifier’s property of high bias and low variance ensures that it will converge faster and is less likely to overfit. One downside is that Naive Bayesian has a conditional independence assumption. This assumption generally holds for the features that are used in Spam Filters, however some dependence is seen in a word’s ability to be used to classify an email based on the context. An example of this is the word free. This word is usually seen in spam emails, however a friend may ask if you are free tonight. The context changes the feature from being that of spam to that of ham and so we solve for this by using bigrams to capture context.</p>
+                        </div>
+
+                    </div></td></tr><tr><td><div class="row">
+
+                        <div class="col-md-12">
+                            <p>For feature selection, I looked at unigrams, bigrams, capitalization, and punctuation. Trigrams would increase accuracy but would create such a hit in performance that I felt the small gains were not worth the increased processing time. I also tried both Bernoulli and Multinomial vectorizations for the features. Bernoulli is binary with a 1 if a feature is present and 0 otherwise, while Multinomial keeps a vector with the counts for each feature. Finally I tried a tfidf transformation on the winners to see if I could improve performance. Tfidf stands for Term Frequency Inverse Document Frequency and essentially changes the counts of a Multinomial vector into percentages of the total number of features.</p>
+                        </div>
+
+                    </div></td></tr><tr><td><div class="row">
+                    <center><h4>Bag of Words (unigrams)</h4></center><br>
+                    <div class="col-md-4">
+                            <a href="../include/bow1.png"><img width="100%" src="../include/bow1.png" alt="Bernoulli"></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="../include/bow2.png"><img width="100%" src="../include/bow2.png" alt="TFIDF/Multinomial"></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="../include/bow3.png"><img width="100%" src="../include/bow3.png" alt="Multinomial"></a>
+                        </div>
+
+                    </div></td></tr><tr><td><div class="row">
+
+                        <div class="col-md-12">
+                            <p>I found that the best pipeline used the Multinomial vector for unigrams and bigrams while ignoring all other features and didn’t use the transformation. This model was chosen because it minimized the false positives rate of hams being classified as spams while retaining an acceptable f1 score. A side effect of this was that false negatives are increased significantly. We can improve this model if we start to look at more features such as the sender and spelling of the email.</p>
+                        </div>
+
+                    </div></td></tr><tr><td><div class="row">
+                    <center><h4>N-Grams</h4></center><br>
+                    <div class="col-md-6">
+                            <a href="../include/ngram1.png"><img width="100%" src="../include/ngram1.png" alt="Bernoulli"></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="../include/ngram2.png"><img width="100%" src="../include/ngram2.png" alt="TFIDF/Multinomial"></a>
+                        </div>
+                        </div></td></tr><tr><td><div class="row">
+
+                    <div class="col-md-6">
+                            <a href="../include/ngram3.png"><img width="100%" src="../include/ngram3.png" alt="Bernoulli"></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="../include/ngram4.png"><img width="100%" src="../include/ngram4.png" alt="TFIDF/Multinomial"></a>
+                        </div>
+
+                    </div></td></tr><tr><td><div class="row">
+
+                        <div class="col-md-12">
+                            <p>Spammers try to get around our filters by using a tactic called Bayesian Poisoning. Among these tactics include copying wikipedia or news articles onto the end of emails to buffer the word features and bypass the filter. There is a constant cat and mouse chase between the Spam Filter programmers and spammers to try and beat each other.</p>
+                        </div>
+
+                    </div></td></tr><tr><td><div class="row">
+
+                    <div class="col-md-6">
+                            <a href="../include/stats.jpg"><img width="100%" src="../include/stats.jpg" alt="Statistics"></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="../include/ROC.png"><img width="100%" src="../include/ROC.png" alt="ROC Curve"></a>
+                        </div>
+
+                    </div></td></tr><tr><td><div class="row">
+
+                        <div class="col-md-12">
+                            <p>In conclusion, finding the best features is not the only way to increase the Spam Filter’s effectiveness. Other ways to improve accuracy would be to get better data and use cross validation to find better classifiers. Finally, for the top performing classifiers, the programmer must choose based on other aspects such as how fast the classifier performs.</p>
+                        </div>
+
+                    </div></td></tr>
+
+                    </div>
+                </td></tr>
+        </table></div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; David Duffrin 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Beautiful Code Snippets -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+</body>
+
+</html>
