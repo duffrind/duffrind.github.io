@@ -66,8 +66,8 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Japanese Language Processing
-                    <small>Thesis</small>
+                <h1 class="page-header">SRS Flashcard Generator
+                    <small>WebApp</small>
                 </h1>
             </div>
         </div>
@@ -77,24 +77,21 @@
         <div class="row">
 
             <div class="col-md-8">
-                <span title="Current Project"><a href="../nlp/">
-                    <img rel="img_src" class="img-responsive" width="100%" src="../include/NLP.jpg" alt="Japanese Natural Language Processing">
+                <span title="Current Project"><a href="http://studysubs.com/">
+                    <img rel="img_src" class="img-responsive" width="100%" src="../include/NLP.jpg" alt="SRS WebApp">
                 </a></span>
             </div>
 
             <div class="col-md-4">
-                <h3>Education through Data</h3>
-                <p>Current technologies that estimate the pronunciation of a Kanji employ the help of look-up dictionaries. This is great for getting high accuracy, however the models are unable to be parsed into a human readable rule book to help learners of the language gain an insight on the features that influence which pronunciation is used in context. For my research, I am using the (<a href="http://www.edrdg.org/kanjidic/kanjd2index.html">Kanjidic2</a> dataset for individual Kanji pronunciations, <a href="http://www.edrdg.org/jmdict/edict_doc.html">JMdict</a> dataset for the vocabulary words, <a href="http://www.edrdg.org/enamdict/enamdict_doc.html">ENAMDICT</a> dataset for proper nouns, and <a href="http://taku910.github.io/mecab/">MeCab</a> for parsing text. <a href="../nlp/">Click here to view my current progress.</a></p>
-                <h3>Work to be done:</h3>
+                <h3>Leisurely Studying Language</h3>
+                <p>StudySubs is a WebApp for Japanese learners to upload subtitles or ebook files to study the vocabulary with <a href="http://ankisrs.net/">Anki</a>.  The WebApp allows the user to login to track his or her progress and minimize time studying by creating flashcards for only new vocabulary for the user. StudySubs automatically extracts all Japanese from the file, tokenizes the words, conjugates each to dictionary form, tags the vocab with the pronunciation, part of speech, and English meaning.  <a href="http://studysubs.com/">Click here to try out the WebApp.</a></p>
+                <h3>Technologies Used:</h3>
                 <ul>
-                    <li>Split up the pronunciations of words and align parts of the pronunciations to the Kanji/Kana</li>
-                    <li>Determine important features and their relationships</li>
-                        <ul>
-                            <li>Pronunciation of syllable before and after Kanji of interest</li>
-                            <li>Kanji/Kana type of grapheme before and after Kanji of interest</li>
-                            <li>Meaning of vocabulary</li>
-                        </ul>
-                    <li>Train the Bayesian Network</li>
+                    <li>Django Framework (Python)</li>
+                    <li><a href="https://pypi.python.org/pypi/tinysegmenter">TinySegmenter</a></li>
+                    <li><a href="http://www.edrdg.org/jmdict/edict_doc.html">EDICT</a> for Part of Speech and Translations</li>
+                    <li>MySQL Database</li>
+                    <li>Bootstrap (JavaScript)</li>
                 </ul>
             </div>
 
