@@ -9,8 +9,13 @@
 }
 
 .jumbotron {
-  height: 350px;
+  height: 300px;
+  width: 100%;
   color: black;
-  text-shadow: gray 0 10px 10px;
+  text-shadow: #444 0 1px 1px;
   background:transparent;
+}
+
+.circular--square {
+  border-radius: 50%;
 }
