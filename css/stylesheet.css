@@ -1,0 +1,16 @@
+.bg {
+  background: url('../include/jsubs.png') center center;
+  position: fixed;
+  width: 100%;
+  height: 350px; /*same height as jumbotron */
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+.jumbotron {
+  height: 350px;
+  color: black;
+  text-shadow: gray 0 10px 10px;
+  background:transparent;
+}
