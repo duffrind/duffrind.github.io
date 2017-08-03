@@ -38,7 +38,7 @@
     <div class="row">
       <div class="col-sm-12" style="background:transparent;">
         <div class="thumbnail" style="border:0px;background:transparent;">
-          <img src="./include/me_small.jpg" alt="..." class="circular--square" width=100>
+          <img src="./include/me_small.jpg" alt="A picture of me" style="border-radius: 50%;" width=100>
           <div class="caption">
             <h3>Thumbnail label</h3>
             <p>...</p>
@@ -83,6 +83,28 @@
   </div>
 
   <div class="container">
+    <div class="row main-projects">
+        <div class="StudySubs col-md-6">
+          studysubs
+        </div>
+        <div class="Thesis col-md-6">
+          thesis
+        </div>
+    </div>
+    <div class="row sub-projects">
+        <div class="spam col-sm-6 col-md-3">
+          spam
+        </div>
+        <div class="bacon col-sm-6 col-md-3">
+          bacon
+        </div>
+        <div class="vr col-sm-6 col-md-3">
+          vr
+        </div>
+        <div class="portables col-sm-6 col-md-3">
+          portables
+        </div>
+    </div>
     <div class="row">
       <h2>Page Content</h2>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
@@ -138,7 +160,7 @@
 
   <div class="container">
   	<div class="row">
-        <div class="col-md-12 text-center"><p>The End.</p></div>
+        <div class="col-md-12 text-center"><p id='copyright'>Copyright © David Duffrin </p></div>
       </div>
   </div>
 
@@ -262,6 +284,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      var year = new Date().getFullYear();
+      document.getElementById('copyright').innerHTML += year;
+    </script>
 
 </body>
 
