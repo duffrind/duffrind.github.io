@@ -14,4 +14,10 @@
   color: white;
   text-shadow: #444 0 1px 1px;
   background:transparent;
+  text-shadow: 2px 2px black;
+}
+
+.thumbnail {
+  background:rgb(238,238,238);
+  background:linear-gradient(gray, rgb(238,238,238), rgb(238,238,238));
 }
