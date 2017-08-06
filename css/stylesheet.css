@@ -11,7 +11,7 @@
 .jumbotron {
   height: 400px;
   width: 100%;
-  color: white;
+  color: #f4f4f4;
   text-shadow: #444 0 1px 1px;
   background:transparent;
   text-shadow: 2px 2px black;
@@ -20,4 +20,21 @@
 .thumbnail {
   background:rgb(#f4f4f4,#f4f4f4,#f4f4f4);
   background:linear-gradient(#373737, #f4f4f4, #f4f4f4);
+}
+
+.modal-dialog{
+    overflow-y: initial !important;
+    width: 80%;
+}
+
+.modal-body{
+    height: 80%;
+    overflow-y: auto;
+    background: #f4f4f4;
+    color: #373737;
+}
+
+.modal-header{
+  background: #373737;
+  color: #f4f4f4;
 }
